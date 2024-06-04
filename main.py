@@ -55,6 +55,35 @@ def calcular_distancia_api(ciudad1, ciudad2):
     except ValueError as e:
         print(e)
 
+def calcular_distancia_minima_entre_tres_ciudades():
+    print("Introduce los datos para la primera ciudad:")
+    ciudad1 = obtener_ciudad()
+    print("Introduce los datos para la segunda ciudad:")
+    ciudad2 = obtener_ciudad()
+    print("Introduce los datos para la tercera ciudad:")
+    ciudad3 = obtener_ciudad()
+
+    try:
+        coords1 = obtener_coordenadas_api(ciudad1)
+        coords2 = obtener_coordenadas_api(ciudad2)
+        coords3 = obtener_coordenadas_api(ciudad3)
+
+        dist1 = haversine(coords1.lng, coords1.lat, coords2.lng, coords2.lat)
+        dist2 = haversine(coords2.lng, coords2.lat, coords3.lng, coords3.lat)
+        dist3 = haversine(coords3.lng, coords3.lat, coords1.lng, coords1.lat)
+
+        min_dist = min(dist1, dist2, dist3)
+        if min_dist == dist1:
+            ciudades_cercanas = (ciudad1.city, ciudad2.city)
+        elif min_dist == dist2:
+            ciudades_cercanas = (ciudad2.city, ciudad3.city)
+        else:
+            ciudades_cercanas = (ciudad3.city, ciudad1.city)
+
+        print(f"Las ciudades más cercanas son {ciudades_cercanas[0]} y {ciudades_cercanas[1]} con una distancia de {min_dist} km.")
+    except ValueError as e:
+        print(e)
+
 def volver():
     input("\nPresiona Enter para volver al menú principal...")
     limpiar_pantalla()
@@ -97,6 +126,10 @@ def menu():
             calcular_distancia_api(ciudad1, ciudad2)
             volver()
         elif opcion == '5':
+            limpiar_pantalla()
+            calcular_distancia_minima_entre_tres_ciudades()
+            volver()
+        elif opcion == '6':
             salir()
         else:
             print("Opción no válida, por favor intenta de nuevo.")
