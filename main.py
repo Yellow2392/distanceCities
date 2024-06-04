@@ -126,6 +126,10 @@ def menu():
             calcular_distancia_api(ciudad1, ciudad2)
             volver()
         elif opcion == '5':
+            limpiar_pantalla()
+            calcular_distancia_minima_entre_tres_ciudades()
+            volver()
+        elif opcion == '6':
             salir()
         else:
             print("Opción no válida, por favor intenta de nuevo.")
