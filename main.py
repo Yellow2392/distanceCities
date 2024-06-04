@@ -14,7 +14,8 @@ def mostrar_menu():
     print("2. Obtener coordenadas desde API")
     print("3. Calcular distancia con CSV")
     print("4. Calcular distancia con API")
-    print("5. Salir")
+    print("5. Calcular distancia mínima entre tres ciudades")
+    print("6. Salir")
 
 def obtener_ciudad():
     ciudad = City()
