@@ -3,6 +3,7 @@ from haversine import haversine
 from csvFunc import get_coordsCSV
 from apiFunc import get_coordsAPI
 from classes import City, Coords
+from testCases import test1, test2
 
 def limpiar_pantalla():
     os.system('cls' if os.name == 'nt' else 'clear')
