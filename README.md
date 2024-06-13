@@ -50,7 +50,7 @@ Evaluamos adicionalmente dos casos particulares dentro del programa
 ![image](https://github.com/Yellow2392/distanceCities/assets/103154944/4c0ed1fb-7e3e-45a0-81ce-6e12f9cb9c92)
 
 ## Notas
-- La medición de la distancia entre dos ciudades funciona correctamente y entrega resultados bastante cercanos a lo que se espera
-- El caso particular de que se mida la distancia entre una misma ciudad funciona debido a que trivialmente la distancia entre un punto y sí mismo es 0
-- El caso de ciudad no existente se maneja apropiadamente en el método por csv al mostrar los debidos mensajes de error
-- Sin embargo, el caso de ciudad no existente no se maneja como se debe en el método por api. Esto se explica ya que la api retorna los resultados que más coincidan a la query enviada, siendo así que su retorno no será vacío. Para tal caso, se recomienda añadir algún mensaje que notifique al usuario la coincidencia más cercana para realizar el cálculo
+- La medición de la distancia entre dos ciudades funciona correctamente y entrega resultados bastante cercanos a lo que se espera.
+- El caso particular de que se mida la distancia entre una misma ciudad funciona debido a que trivialmente la distancia entre un punto y sí mismo es 0.
+- El caso de ciudad no existente se maneja apropiadamente en el método por csv al mostrar los debidos mensajes de error.
+- Sin embargo, el caso de ciudad no existente no se maneja como se debe en el método por api. Esto se explica ya que la api retorna los resultados que más coincidan a la query enviada, siendo así que su retorno no será vacío. Para tal caso, se recomienda añadir algún mensaje que notifique al usuario la coincidencia más cercana para realizar el cálculo.
