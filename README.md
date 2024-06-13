@@ -6,6 +6,9 @@
 ## Descripción de la aplicación
 Este es un pequeño programa que permite medir las distancias entre 2 ciudades mediante 2 métodos que el usuario elija. Sea mediante el dataset `worldcities.csv` o mediante la api proporcionada por https://nominatim.openstreetmap.org
 
+## Equipo con quienes colaboramos en su github:
+https://github.com/CeciliaNatali/Tarea_Soft_Duplas
+
 ## Pruebas unitarias
 Se implementaron 2 pruebas unitarias dentro del módulo `testCases.py` para corroborar la precisión de los datos y resultados obtenidos en ambos casos comparando con valores investigados de manera aparte.
 En ese sentido como pruebas manuales tenemos:
